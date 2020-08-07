@@ -1,8 +1,15 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-int main(){
+//CONST VARS
+
+
+int main()
+{
+    //LOCAL VARS
+    
     cout << "hello";
 }
 
