@@ -1,6 +1,6 @@
 #include <SDL.h>
 #include <stdio.h>
-// "-IE:\MinGW_LIBRARIES\include\SDL2 -LE:\MinGW_LIBRARIES\lib"
+// "-I<DriveLetter>:\<MinGW_LIBRARIES>\include\SDL2 -L<DriveLetter>:\<MinGW_LIBRARIES>\lib"
 //Screen dimension constants
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;

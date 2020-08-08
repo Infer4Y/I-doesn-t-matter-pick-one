@@ -1,0 +1,48 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version":"2.0.0",
+    "tasks": [
+        {
+            "label": "Compiler",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-c",
+                "${workspaceFolder}\\src\\main.cpp",
+                "-IC:\\MinGW_LIBRARIES\\include\\SDL2"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Linker",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${workspaceFolder}\\main.o",
+                "-o",
+                "${workspaceFolder}\\bin\\HelloSDL.exe",
+                "-LC:\\MinGW_LIBRARIES\\lib",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2"
+            ]
+        },
+        {
+            "label": "Build HelloSDL",
+            "dependsOn": [
+                "Compiler",
+                "Linker"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
